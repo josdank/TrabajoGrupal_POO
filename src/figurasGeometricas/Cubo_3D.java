@@ -5,9 +5,11 @@ public class Cubo_3D extends tresD{
 
     public Cubo_3D() {}
 
-    public Cubo_3D(double tamanio_lado) {
+    public Cubo_3D(String nombre_figura, double area, double volumen, int numero_caras, double tamanio_lado) {
+        super(nombre_figura, area, volumen, numero_caras);
         this.tamanio_lado = tamanio_lado;
     }
+
     @Override
     public double calcular_area(){
         double area = 6*(tamanio_lado * tamanio_lado);
