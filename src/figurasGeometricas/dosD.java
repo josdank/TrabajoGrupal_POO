@@ -1,46 +1,51 @@
 package figurasGeometricas;
-import figurasGeometricas.FigurasGeometricas;
+
 public class dosD extends FigurasGeometricas {
-    double tamanio_lados;
+    private double tamanioLados;
 
     public dosD() {
     }
 
-    public dosD(int nlados, String nombre, double tamanio_lados) {
+    public dosD(int nlados, String nombre, double tamanioLados) {
         super(nlados, nombre);
-        this.tamanio_lados = tamanio_lados;
+        this.tamanioLados = tamanioLados;
     }
 
-    public double getTamanio_lados() {
-        return tamanio_lados;
+    public double getTamanioLados() {
+        return tamanioLados;
     }
 
-    public void setTamanio_lados(double tamanio_lados) {
-        this.tamanio_lados = tamanio_lados;
+    public void setTamanioLados(double tamanioLados) {
+        this.tamanioLados = tamanioLados;
     }
 
     public void calcularAreaRegulares() {
-        if (nombre.equals("Cuadrado")) {
-            double area = tamanio_lados * tamanio_lados;
-            System.out.println("El area del cuadrado es: "+area);
-        } else if (nombre.equals("Triangulo")) {
-            double area = (base*altura)/2;
-            System.out.println("El area del triangulo es: "+area);
-        } else if (nombre.equals("Circulo")) {
-            double area = pi * (radio*radio);
-        }else {
+        if (getNombre().equals("Cuadrado")) {
+            double area = tamanioLados * tamanioLados;
+            System.out.println("El area del cuadrado es: " + area);
+        } else if (getNombre().equals("Triangulo")) {
+            double base = 0;
+            double altura = 0;
+            double area = (base * altura) / 2;
+            System.out.println("El area del triangulo es: " + area);
+        } else if (getNombre().equals("Circulo")) {
+            double pi = Math.PI;
+            double radio = 0;
+            double area = pi * (radio * radio);
+            System.out.println("El area del circulo es: " + area);
+        } else {
             System.out.println("Figura no apta para calculo de area");
         }
     }
 
     public void calcularPerimetroRegulares() {
-        if (nombre.equals("Cuadrado")) {
-            double perimetro = 4 * tamanio_lados;
+        if (getNombre().equals("Cuadrado")) {
+            double perimetro = 4 * tamanioLados;
             System.out.println("El perímetro del cuadrado es: " + perimetro);
-        } else if (nombre.equals("TrianguloEquilatero")) {
-            // Implementa el cálculo del perímetro del triángulo equilátero aquí
-        } else if (nombre.equals("Circulo")) {
-            // Implementa el cálculo del perímetro del círculo aquí
+        } else if (getNombre().equals("TrianguloEquilatero")) {
+
+        } else if (getNombre().equals("Circulo")) {
+
         } else {
             System.out.println("Figura no soportada para cálculo de perímetro.");
         }
