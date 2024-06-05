@@ -6,8 +6,9 @@ public class dosD extends FigurasGeometricas {
     public dosD() {
     }
 
-    public dosD(int nlados, String nombre) {
+    public dosD(int nlados, String nombre, double tamanio_lados) {
         super(nlados, nombre);
+        this.tamanio_lados = tamanio_lados;
     }
 
     public double getTamanio_lados() {
