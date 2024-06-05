@@ -1,8 +1,8 @@
 package figurasGeometricas;
 
 public class FigurasGeometricas {
-    private int nlados;
-    private String nombre;
+    int nlados;
+    String nombre;
 
     public FigurasGeometricas() {
     }

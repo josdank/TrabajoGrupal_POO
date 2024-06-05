@@ -1,28 +1,18 @@
 package figurasGeometricas;
 
-public class regulares extends FigurasGeometricas {
-    private double longitudLado;
-
+public class regulares extends dosD {
     public regulares() {
     }
 
-    public regulares(int nlados, String nombre, double longitudLado) {
-        super(nlados, nombre);
-        this.longitudLado = longitudLado;
-    }
+    public regulares(int nlados, String nombre, double tamanioLados) {
+        super(nlados, nombre, tamanioLados);
 
-    public double getLongitudLado() {
-        return longitudLado;
     }
-
-    public void setLongitudLado(double longitudLado) {
-        this.longitudLado = longitudLado;
-    }
-
+    @Override
     public double calcularArea() {
         return 0; // Método genérico, sobrescrito en las subclases
     }
-
+    @Override
     public double calcularPerimetro() {
         return 0; // Método genérico, sobrescrito en las subclases
     }

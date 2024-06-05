@@ -2,8 +2,11 @@ package figurasGeometricas;
 
 public class triangulos extends regulares {
 
-    public triangulos(int nlados, String nombre, double longitudLado) {
-        super(nlados, nombre, longitudLado);
+    public triangulos() {
+    }
+
+    public triangulos(int nlados, String nombre, double tamanioLados) {
+        super(nlados, nombre, tamanioLados);
     }
 
     @Override
