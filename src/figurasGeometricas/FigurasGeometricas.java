@@ -1,8 +1,8 @@
 package figurasGeometricas;
 
 public class FigurasGeometricas {
-    int nlados;
-    String nombre;
+    private int nlados;
+    private String nombre;
 
     public FigurasGeometricas() {
     }
@@ -27,6 +27,7 @@ public class FigurasGeometricas {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
     public void mostrar() {
         System.out.println("El nombre es: " + nombre);
         System.out.println("El nlados es: " + nlados);
