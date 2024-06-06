@@ -17,7 +17,6 @@ public class Main {
             System.out.println("¿La figura a calcular es de dos (2D) o tres (3D) dimensiones?");
             System.out.print("Ingrese su respuesta (Ingrese 'exit' para salir) : ");
             respuesta = sc.nextLine().toLowerCase();
-            System.out.println("------------------------------------------------------------");
             System.out.println();
             while (!(respuesta.equals("dosd") || respuesta.equals("2d") || respuesta.equals("tresd") || respuesta.equals("3d") || respuesta.equals("exit"))){
                 System.out.println("¡Ingrese una opcion valida!");
