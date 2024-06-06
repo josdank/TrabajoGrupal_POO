@@ -16,4 +16,8 @@ public class regulares extends dosD {
     public double calcularPerimetro() {
         return 0; // Método genérico, sobrescrito en las subclases
     }
+    @Override
+    public void mostrar() {
+        //Metodo generico
+    }
 }
