@@ -134,6 +134,7 @@ public class Main {
                         System.out.println("¡Figura no reconocida!");
                 }
             }
+            //comentario
         } while (!respuesta.equals("exit"));
 
         sc.close();
