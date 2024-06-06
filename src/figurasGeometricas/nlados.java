@@ -27,4 +27,8 @@ public class nlados extends regulares {
     public double calcularPerimetro() {
         return tamanioLados * nlados;
     }
+    @Override
+    public void mostrar() {
+        //Metodo generico
+    }
 }
