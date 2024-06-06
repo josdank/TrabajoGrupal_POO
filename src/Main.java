@@ -36,26 +36,31 @@ public class Main {
                 }
 
                 if (respuesta.equals("regular")) {
-                    System.out.println("Circulo");
-                    System.out.println("Triangulo");
-                    System.out.println("Cuadrado");
-                    System.out.println("nlados (Hasta el Dodecagono)");
+                    System.out.println("\tCirculo");
+                    System.out.println("\tTriangulo");
+                    System.out.println("\tCuadrado");
+                    System.out.println("\tnlados (Hasta el Dodecagono)");
                     System.out.print("Ingrese el nombre de la figura que desea calcular: ");
                     respuesta = sc.nextLine().toLowerCase();
                     System.out.println("---------------------------------------------------");
                     if (respuesta.equals("circulo")) {
-                        // lógica para el círculo
                         System.out.print("Ingrese el radio del círculo: ");
                         double radio = sc.nextDouble();
                         circulos circulo = new circulos();
+                        circulo.setNombre("Circulo");
+                        circulo.setRadio(radio);
                         sc.nextLine();
+                        circulo.mostrar();
                         System.out.println("---------------------------------------------------");
                     } else if (respuesta.equals("triangulo")) {
                         triangulos triangulo = new triangulos();
-                        System.out.print("Ingrese el tamaño/longitud de los lados del triángulo: ");
+                        System.out.print("Ingrese el tamaño/longitud de los lados del triangulo: ");
                         double tamanioLados = sc.nextDouble();
                         sc.nextLine();
                         triangulo.setTamanioLados(tamanioLados);
+                        triangulo.setNombre("Triangulo");
+                        triangulo.setNlados(3);
+                        triangulo.mostrar();
                         System.out.println("----------------------------------------------------");
                     } else if (respuesta.equals("cuadrado")) {
                         cuadrilateros cuadrado = new cuadrilateros();
@@ -63,39 +68,54 @@ public class Main {
                         double tamanioLados = sc.nextDouble();
                         sc.nextLine();
                         cuadrado.setTamanioLados(tamanioLados);
-                        System.out.println("El área es: " + cuadrado.calcularArea());
-                        System.out.println("El perímetro es: " + cuadrado.calcularPerimetro());
+                        cuadrado.setNombre("Cuadrado");
+                        cuadrado.setNlados(4);
+                        cuadrado.mostrar();
                         System.out.println("----------------------------------------------------");
                     } else if (respuesta.equals("nlados")) {
+                        String nombreFigura = "";
                         System.out.print("Ingrese el número de lados del polígono: ");
                         int nlados = sc.nextInt();
+                        if (nlados == 5){
+                            nombreFigura = "Pentágono";
+                        }else if (nlados == 6){
+                            nombreFigura = "Hexágono";
+                        }else if (nlados == 7){
+                            nombreFigura = "Heptágono";
+                        }else if (nlados == 8){
+                            nombreFigura = "Octágono";
+                        }else if (nlados == 9){
+                            nombreFigura = "Nonágono";
+                        }else if (nlados == 10){
+                            nombreFigura = "Decágono";
+                        }else if (nlados == 11){
+                            nombreFigura = "Endecágono";
+                        }else if (nlados == 12){
+                            nombreFigura = "Dodecágono";
+                        }
                         System.out.print("Ingrese el tamaño/longitud de los lados del polígono: ");
                         double tamanioLados = sc.nextDouble();
                         sc.nextLine();
-                        nlados poligono = new nlados(nlados, "Polígono Regular", tamanioLados, 0);
+                        nlados poligono = new nlados(nlados,nombreFigura, tamanioLados, 0);
                         poligono.calcularApotema(nlados, tamanioLados);
                         poligono.mostrar();
                         System.out.println("----------------------------------------------------");
                     } else {
                         System.out.println("¡Figura no reconocida!");
                     }
-                } else if (respuesta.equals("irregular")) {
+                }
+                if (respuesta.equals("irregular")) {
                     System.out.println("Cálculo del perimetro de las figuras irregulares");
                     System.out.println("Ingrese el numero de lados de la figura:");
                     int lados = sc.nextInt();
-                    System.out.println("-----Instancia vacía-----");
                     //Instancia irregulares
                     iregulares iregulares01 = new iregulares();
                     iregulares01.setNlados(lados);
                     iregulares01.calcularPerimetro();
                     iregulares01.mostrar();
-                    //Instancias irregulares
-                    iregulares iregulares02 = new iregulares();
-                    iregulares02.setNlados(7);
-                    System.out.println("-----Instancia llena-----");
-                    iregulares02.calcularPerimetro();
-                    iregulares02.mostrar();
+                    sc.nextLine();
                 }
+
             } else if (respuesta.equals("3d") || respuesta.equals("tresd")) {
                 System.out.println("Opciones disponibles:");
                 System.out.println("1. Prisma Rectangular");
@@ -145,7 +165,7 @@ public class Main {
             }
             //comentario
         } while (!respuesta.equals("exit"));{
-            System.out.println("Relizado por: \n1. Garcia Mireya\n2. Guerra Josué\n3. Gutierrez Alejandro\n4. Lincango Josue\n5. Marquez Christian\n6. Vilatuña Anderson");
+            System.out.println("Relizado por: \n1. Garcia Mireya\n2. Guerra Josué\n3. Gutierrez Alejandro\n4. Lincango Jose\n5. Marquez Christian\n6. Vilatuña Anderson");
         }
 
         sc.close();

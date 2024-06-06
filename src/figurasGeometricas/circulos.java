@@ -40,8 +40,8 @@ public class circulos extends regulares {
     public void mostrar() {
         System.out.println("Nombre: " + getNombre());
         System.out.println("Radio: " + radio);
-        System.out.println("Área: " + calcularArea());
-        System.out.println("Perímetro: " + calcularPerimetro());
+        System.out.println("Área: " + Math.round(calcularArea() * 100.0) / 100.0);
+        System.out.println("Perímetro: " + Math.round(calcularPerimetro() * 100.0) / 100.0);
     }
 }
 

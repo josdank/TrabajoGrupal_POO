@@ -21,4 +21,12 @@ public class triangulos extends regulares {
         // Para un triángulo equilátero, el perímetro es 3 * lado
         return 3 * getTamanioLados();
     }
+    @Override
+    public void mostrar() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Número de Lados: " + nlados);
+        System.out.println("Tamaño de los Lados: " + tamanioLados);
+        System.out.println("Área: " + Math.round(calcularArea() * 100.0) / 100.0);
+        System.out.println("Perímetro: " + Math.round(calcularPerimetro() * 100.0) / 100.0);
+    }
 }
