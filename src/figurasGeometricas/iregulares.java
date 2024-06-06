@@ -26,6 +26,7 @@ public class iregulares extends dosD {
         this.longitudLados = longitudLados;
     }
     //Metodos personalizados
+    //Calcular el perimetro de una figura irregular, se solicita la medida de cada lado
     public double calcularPerimetro(){
         double contador = 0;
         System.out.print("Longitud de cada lado");
@@ -36,5 +37,12 @@ public class iregulares extends dosD {
             contador+=contador+valor;
         }
         return contador;
+    }
+    //Mopstrar los resultados del metodo "calcularPerimetro"
+    @Override
+    public void mostrar(){
+        super.mostrar();
+        double perimetro = calcularPerimetro();
+        System.out.println("El perimetro de  la figura es:"+perimetro);
     }
 }
