@@ -1,10 +1,10 @@
 INTEGRANTES:
-Garcia Mireya 
-Guerra Josué
-Gutierrez Alejandro 
-Lincango Jose
-Marquez Christian
-Vilatuña Anderson
+* Garcia Mireya 
+* Guerra Josué
+* Gutierrez Alejandro 
+* Lincango Jose
+* Marquez Christian
+* Vilatuña Anderson
 Ejecucion de la figura circulo: ![image](https://github.com/josdank/TrabajoGrupal_POO/assets/170632640/3a5d0817-ac9a-4240-820b-71f364de921b) 
 
 Ejecucion de la figura triangulo: ![image](https://github.com/josdank/TrabajoGrupal_POO/assets/170632640/5a3aff13-c5e6-42ec-8261-980c5aa3716a)
