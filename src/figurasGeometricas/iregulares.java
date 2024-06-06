@@ -29,12 +29,12 @@ public class iregulares extends dosD {
     //Calcular el perimetro de una figura irregular, se solicita la medida de cada lado
     public double calcularPerimetro(){
         double contador = 0;
-        System.out.print("Longitud de cada lado");
-        for (int i=0; i<=nlados; i++){
+        System.out.println("Longitud de cada lado");
+        for (int i=0; i<nlados; i++){
             Scanner valores = new Scanner(System.in);
             System.out.println("Ingrese el valor del lado "+i);
             double valor = valores.nextDouble();
-            contador+=contador+valor;
+            contador=contador+valor;
         }
         return contador;
     }
@@ -42,7 +42,7 @@ public class iregulares extends dosD {
     @Override
     public void mostrar(){
         super.mostrar();
-        double perimetro = calcularPerimetro();
+        double perimetro = this.calcularPerimetro();
         System.out.println("El perimetro de  la figura es:"+perimetro);
     }
 }

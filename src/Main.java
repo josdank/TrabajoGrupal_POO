@@ -6,6 +6,7 @@ import figurasGeometricas.nlados;
 import figurasGeometricas.circulos;
 import figurasGeometricas.cuadrilateros;
 import figurasGeometricas.triangulos;
+import figurasGeometricas.iregulares;
 public class Main {
     public static void main(String[] args) {
         String respuesta;
@@ -75,7 +76,21 @@ public class Main {
                         System.out.println("¡Figura no reconocida!");
                     }
                 } else if (respuesta.equals("irregular")) {
-                    System.out.println("Cálculo de figuras irregulares no implementado aún.");
+                    System.out.println("Cálculo del perimetro de las figuras irregulares");
+                    System.out.println("Ingrese el numero de lados de la figura:");
+                    int lados = sc.nextInt();
+                    System.out.println("-----Instancia vacía-----");
+                    //Instancia irregulares
+                    iregulares iregulares01 = new iregulares();
+                    iregulares01.setNlados(lados);
+                    iregulares01.calcularPerimetro();
+                    iregulares01.mostrar();
+                    //Instancias irregulares
+                    iregulares iregulares02 = new iregulares();
+                    iregulares02.setNlados(7);
+                    System.out.println("-----Instancia llena-----");
+                    iregulares02.calcularPerimetro();
+                    iregulares02.mostrar();
                 }
             } else if (respuesta.equals("3d") || respuesta.equals("tresd")) {
                 System.out.println("Opciones disponibles:");
