@@ -19,8 +19,9 @@ public class Main {
             System.out.print("Ingrese su respuesta (Ingrese 'exit' para salir) : ");
             respuesta = sc.nextLine().toLowerCase();
             while (!(respuesta.equals("dosd") || respuesta.equals("2d") || respuesta.equals("tresd") || respuesta.equals("3d") || respuesta.equals("exit"))){
-                System.out.println("¡Ingrese una opcion valida!");
+                System.out.println("¡Ingrese una opcion valida! ");
                 respuesta = sc.nextLine().toLowerCase();
+                System.out.println("------------------------------------------------------------");
             }
             if (respuesta.equals("dosd") || respuesta.equals("2d")) {
                 System.out.println("¿La figura a calcular es regular o irregular?");
@@ -38,7 +39,7 @@ public class Main {
                     System.out.println("Circulo");
                     System.out.println("Triangulo");
                     System.out.println("Cuadrado");
-                    System.out.println("Otros Poligonos (Hasta el Dodecagono)");
+                    System.out.println("nlados (Hasta el Dodecagono)");
                     System.out.print("Ingrese el nombre de la figura que desea calcular: ");
                     respuesta = sc.nextLine().toLowerCase();
                     System.out.println("---------------------------------------------------");
@@ -47,28 +48,33 @@ public class Main {
                         System.out.print("Ingrese el radio del círculo: ");
                         double radio = sc.nextDouble();
                         circulos circulo = new circulos();
+                        sc.nextLine();
                         System.out.println("---------------------------------------------------");
                     } else if (respuesta.equals("triangulo")) {
                         triangulos triangulo = new triangulos();
                         System.out.print("Ingrese el tamaño/longitud de los lados del triángulo: ");
                         double tamanioLados = sc.nextDouble();
+                        sc.nextLine();
                         triangulo.setTamanioLados(tamanioLados);
                         System.out.println("----------------------------------------------------");
                     } else if (respuesta.equals("cuadrado")) {
                         cuadrilateros cuadrado = new cuadrilateros();
                         System.out.print("Ingrese el tamaño/longitud de los lados del cuadrado: ");
                         double tamanioLados = sc.nextDouble();
+                        sc.nextLine();
                         cuadrado.setTamanioLados(tamanioLados);
                         System.out.println("El área es: " + cuadrado.calcularArea());
                         System.out.println("El perímetro es: " + cuadrado.calcularPerimetro());
                         System.out.println("----------------------------------------------------");
-                    } else if (respuesta.equals("pentagono")) {
-                        nlados pentagono = new nlados();
-                        System.out.print("Ingrese el tamaño/longitud de los lados del pentágono: ");
+                    } else if (respuesta.equals("nlados")) {
+                        System.out.print("Ingrese el número de lados del polígono: ");
+                        int nlados = sc.nextInt();
+                        System.out.print("Ingrese el tamaño/longitud de los lados del polígono: ");
                         double tamanioLados = sc.nextDouble();
-                        pentagono.setTamanioLados(tamanioLados);
-                        System.out.println("El área es: " + pentagono.calcularArea());
-                        System.out.println("El perímetro es: " + pentagono.calcularPerimetro());
+                        sc.nextLine();
+                        nlados poligono = new nlados(nlados, "Polígono Regular", tamanioLados, 0);
+                        poligono.calcularApotema(nlados, tamanioLados);
+                        poligono.mostrar();
                         System.out.println("----------------------------------------------------");
                     } else {
                         System.out.println("¡Figura no reconocida!");
@@ -108,6 +114,7 @@ public class Main {
                         double anchoPrisma = sc.nextDouble();
                         System.out.print("Ingrese la altura del prisma: ");
                         double alturaPrisma = sc.nextDouble();
+                        sc.nextLine();
                         PrismaRectangular_3D prisma = new PrismaRectangular_3D("Prisma Rectangular", 0, 0, 6, largoPrisma, anchoPrisma, alturaPrisma);
                         prisma.mostrar();
                         System.out.println(" ");
@@ -116,6 +123,7 @@ public class Main {
                     case "cubo":
                         System.out.print("Ingrese la longitud del lado del cubo: ");
                         double ladoCubo = sc.nextDouble();
+                        sc.nextLine();
                         Cubo_3D cubo = new Cubo_3D("Cubo", 0, 0, 6, ladoCubo);
                         cubo.mostrar();
                         System.out.println(" ");
@@ -126,6 +134,7 @@ public class Main {
                         double radioCilindro = sc.nextDouble();
                         System.out.print("Ingrese la altura del cilindro: ");
                         double alturaCilindro = sc.nextDouble();
+                        sc.nextLine();
                         Cilindro_3D cilindro = new Cilindro_3D("Cilindro", 0, 0, 2, radioCilindro, 3.141592, alturaCilindro);
                         cilindro.mostrar();
                         System.out.println(" ");
@@ -135,7 +144,9 @@ public class Main {
                 }
             }
             //comentario
-        } while (!respuesta.equals("exit"));
+        } while (!respuesta.equals("exit"));{
+            System.out.println("Relizado por: \n1. Garcia Mireya\n2. Guerra Josué\n3. Gutierrez Alejandro\n4. Lincango Josue\n5. Marquez Christian\n6. Vilatuña Anderson");
+        }
 
         sc.close();
     }
