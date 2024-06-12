@@ -25,4 +25,8 @@ public class dosD extends FigurasGeometricas {
     public double calcularPerimetro() {
         return 0; // Método genérico, sobrescrito en las subclases
     }
+    @Override
+    public void mostrar() {
+        //Metodo generico
+    }
 }

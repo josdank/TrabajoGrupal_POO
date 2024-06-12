@@ -51,8 +51,8 @@ public class PrismaRectangular_3D extends tresD{
     @Override
     public void mostrar(){
         super.mostrar();
-        System.out.println("Profundidad" + profundidad);
-        System.out.println("Area"+calcular_area());
-        System.out.println("Volumen"+calcular_volumen());
+        System.out.println("Profundidad: " + Math.round(profundidad*100.0)/100.0);
+        System.out.println("Área: " + Math.round(calcular_area() * 100.0) / 100.0);
+        System.out.println("Volumen: " + Math.round(calcular_volumen() * 100.0) / 100.0);
     }
 }
